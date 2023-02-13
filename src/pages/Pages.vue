@@ -11,11 +11,11 @@
 </template>
 
 <page-query>
-    query Pages {
-        pages: allPage {
-            path
-        }
+query Pages {
+    pages: allPage {
+        path
     }
+}
 </page-query>
 
 <script>
