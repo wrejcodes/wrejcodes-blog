@@ -6,5 +6,16 @@
 
 module.exports = {
   siteName: 'wrejcodes',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'BlogPost',
+        path: './content/blog/**/*.md',
+      }
+    }
+  ],
+  template: {
+    BlogPost: '/blog/:year/:month/:day/:slug'
+  }
 }
