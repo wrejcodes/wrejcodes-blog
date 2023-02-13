@@ -3,6 +3,8 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteName: 'wrejcodes',
@@ -16,6 +18,16 @@ module.exports = {
     }
   ],
   template: {
-    BlogPost: '/blog/:year/:month/:day/:slug'
+    BlogPost: '/blog/:slug'
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          tailwindcss,
+          autoprefixer
+        ]
+      }
+    }
   }
 }

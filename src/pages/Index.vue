@@ -2,17 +2,11 @@
   <Layout>
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
 
-    <h1>Welcome to my gridsome blog</h1>
+    <h1 class="text-xl font-semibold mb-5">Welcome to my gridsome blog</h1>
 
     <p>
       I'm a developer and I make things. Sometimes I'll talk about it here.
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
     </p>
 
   </Layout>
@@ -27,7 +21,4 @@ export default {
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
-}
 </style>
