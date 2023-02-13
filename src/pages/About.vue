@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1>About me</h1>
-    <p>I work for SpyFu. Working on learning gridsome.</p>
+    <p>I work for SpyFu. Using this blog to learn gridsome.</p>
   </Layout>
 </template>
 
