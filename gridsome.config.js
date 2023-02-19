@@ -17,6 +17,7 @@ module.exports = {
       }
     }
   ],
+  port: 13337,
   template: {
     BlogPost: '/blog/:slug'
   },
