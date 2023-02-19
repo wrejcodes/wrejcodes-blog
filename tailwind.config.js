@@ -23,6 +23,15 @@ module.exports = {
     fontFamily: {
       sans: ['Work Sans']
     },
+    fontWeight: {
+      hariline: 200,
+      light: 200,
+      thin: 200,
+      normal: 400,
+      semibold: 600,
+      extrabold: 800,
+      black: 900,
+    },
     fontSize: {
       sm: '0.8rem',
       base: '1rem',

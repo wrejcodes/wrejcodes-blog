@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1 class="text-2xl mb-2">{{ $page.post.title }}</h1>
-    <span class="font-light">{{ $page.post.date }}</span>
+    <span class="font-light text-rhino-300">{{ $page.post.date }}</span>
     <div class="flex flex-wrap mt-2 mb-4 text-sm">
       <g-link
         :to="tag.path"
