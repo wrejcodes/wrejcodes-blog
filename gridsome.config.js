@@ -14,12 +14,25 @@ module.exports = {
       options: {
         typeName: 'BlogPost',
         path: './content/blog/**/*.md',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true,
+            route: '/tag/:id'
+          }
+        },
+        remark: {
+          plugins: [
+            [ 'gridsome-plugin-remark-shiki', { theme: 'material-theme-palenight', skipInline: true } ],
+          ]
+        },
       }
     }
   ],
   port: 13337,
   template: {
-    BlogPost: '/blog/:slug'
+    BlogPost: '/blog/:slug',
+    Tag: '/tag/:id',
   },
   css: {
     loaderOptions: {
