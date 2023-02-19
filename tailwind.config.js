@@ -8,6 +8,14 @@ module.exports = {
     './src/**/*.pug',
     './src/**/*.md',
   ],
+  purge: [
+    './src/**/*.vue',
+    './src/**/*.js',
+    './src/**/*.jsx',
+    './src/**/*.html',
+    './src/**/*.pug',
+    './src/**/*.md',
+  ],
   theme: {
     extend: {
       
