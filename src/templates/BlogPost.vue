@@ -1,9 +1,19 @@
 <template>
-    <Layout>
-        <h1 class="text-xl font-semibold mb-2">{{ $page.post.title }}</h1>
-        <span class="font-light">{{ $page.post.date }}</span>
-        <div class="mt-4 container markdown" v-html="$page.post.content" />
-    </Layout>
+  <Layout>
+    <h1 class="text-2xl mb-2">{{ $page.post.title }}</h1>
+    <span class="font-light">{{ $page.post.date }}</span>
+    <div class="flex flex-wrap mt-2 mb-4 text-sm">
+      <g-link
+        :to="tag.path"
+        v-for="tag in $page.post.tags"
+        :key="tag.id"
+        class="bg-mojo-300 rounded-full px-2 py-1 mr-4 mb-4 text-mojo-700 hover:text-mojo-300 hover:bg-mojo-700"
+      >
+        {{ tag.title }}
+      </g-link>
+    </div>
+    <div class="mt-8 mb-16 prose lg:prose-lg xl:prose-xl" v-html="$page.post.content" />
+  </Layout>
 </template>
 
 <page-query>
@@ -12,6 +22,10 @@ query Post ($path: String!) {
         title
         date (format: "MMM D, Y")
         content
+        tags {
+          title
+          path
+        }
     }
 }
 </page-query>
@@ -27,40 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.markdown {
-  @apply text-lg text-woodsmoke-900 leading-normal;
-  & > * + *,  & li + li, & li > p + p {
-    @apply mt-6;
+  .text-2xl {
+    font-weight: 800;
   }
-  & strong {
-    @apply text-woodsmoke-500 font-bold;
-  }
-  & a {
-    @apply text-woodsmoke-500 font-semibold;
-  }
-  & strong a {
-    @apply font-bold;
-  }
-  & h2 {
-    @apply leading-tight text-xl font-bold text-woodsmoke-500 mb-2 mt-10;
-  }
-  & h3 {
-    @apply leading-tight text-lg font-bold text-woodsmoke-500 mt-8 -mb-2;
-  }
-  & code {
-    @apply font-mono text-sm inline bg-woodsmoke-300 px-1;
-  }
-  & pre code {
-    @apply block bg-woodsmoke-500 p-4 rounded;
-  }
-  & blockquote {
-    @apply border-l-4 border-woodsmoke-400 pl-4 italic;
-  }
-  & ul, & ol {
-    @apply pl-5;
-    @screen sm {
-      @apply pl-10;
-    }
-  }
-}
 </style>

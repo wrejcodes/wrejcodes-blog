@@ -20,6 +20,18 @@ module.exports = {
     extend: {
       
     },
+    fontFamily: {
+      sans: ['Work Sans']
+    },
+    fontSize: {
+      sm: '0.8rem',
+      base: '1rem',
+      xl: '1.25rem',
+      '2xl': '1.825rem',
+      '3xl': '2.250rem',
+      '4xl': '2.750rem',
+      '5xl': '3.25rem'
+    },
     colors: {
       'raffia': {
         '50': '#fefdfc', 
@@ -71,5 +83,7 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
