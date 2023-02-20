@@ -26,6 +26,6 @@ export default {
 }
 ```
 
-I have been thoroughly enjoying the tutorial that [@simon_mannes](https://mannes.tech/girdsome-tutorial/) has put together for learning gridsome. I have been able to add a lot of really nice features to this blog quickly thanks to the power of gridsome and the guidance of that tutorial. Check it out if you're thinking about learning gridsome.
+I have been thoroughly enjoying the tutorial that [@simon_mannes](https://mannes.tech/gridsome-tutorial/) has put together for learning gridsome. I have been able to add a lot of really nice features to this blog quickly thanks to the power of gridsome and the guidance of that tutorial. Check it out if you're thinking about learning gridsome.
 
 Other things that were added are images! I haven't done any modifications to the image, so I'm interested in how gridsome handles images for performance by default.
