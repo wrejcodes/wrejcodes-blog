@@ -24,10 +24,25 @@
         {{ tag.title }}
       </g-link>
     </div>
-    <div
-      class="mt-8 mb-16 prose lg:prose-lg xl:prose-xl"
-      v-html="$page.post.content"
-    />
+    <!-- Image -->
+    <figure
+      v-if="$page.post.image"
+      class="flex flex-col"
+    >
+      <g-image
+        :alt="$page.post.image.alt"
+        :src="$page.post.image.path"
+        class="mb-2"
+      />
+      <figcaption
+        class="self-center image-caption mb-15"
+        v-html="$page.post.image.caption"
+      />
+      <div
+        class="mt-8 mb-16 prose lg:prose-lg xl:prose-xl"
+        v-html="$page.post.content"
+      />
+    </figure>
   </Layout>
 </template>
 
@@ -39,6 +54,11 @@ query Post ($path: String!) {
         content
         path
         summary
+        image {
+          path
+          caption
+          alt
+        }
         tags {
           title
           path
