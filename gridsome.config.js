@@ -8,6 +8,11 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteName: 'wrejcodes',
+  siteDescription: 'Wrejcodes personal devblog. Discussion of dev related topics, tools, and technologies.',
+  siteUrl: process.env.DEPLOY_URL || 'https://wrejcodes.com',
+  metaData: {
+    author: '@wrejcodes',
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -26,8 +31,19 @@ module.exports = {
             [ 'gridsome-plugin-remark-shiki', { theme: 'material-theme-palenight', skipInline: true } ],
           ]
         },
+<<<<<<< Updated upstream
       }
     }
+=======
+      },
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/privacy', 'legal'],
+      },
+    },
+>>>>>>> Stashed changes
   ],
   port: 13337,
   template: {
