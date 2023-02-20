@@ -31,10 +31,6 @@ module.exports = {
             [ 'gridsome-plugin-remark-shiki', { theme: 'material-theme-palenight', skipInline: true } ],
           ]
         },
-<<<<<<< Updated upstream
-      }
-    }
-=======
       },
     },
     {
@@ -43,7 +39,6 @@ module.exports = {
         exclude: ['/privacy', 'legal'],
       },
     },
->>>>>>> Stashed changes
   ],
   port: 13337,
   template: {

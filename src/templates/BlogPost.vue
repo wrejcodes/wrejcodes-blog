@@ -36,17 +36,8 @@ query Post ($path: String!) {
 import SEO from '../mixins/SEO.vue';
 
 export default {
-<<<<<<< Updated upstream
-    metaInfo () {
-        return {
-            title: this.$page.post.title
-        }
-    }
-}
-=======
   mixins: [SEO],
 };
->>>>>>> Stashed changes
 </script>
 
 <style lang="scss" scoped>
