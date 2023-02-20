@@ -10,7 +10,7 @@ module.exports = {
   siteName: 'wrejcodes',
   siteDescription: 'Wrejcodes personal devblog. Discussion of dev related topics, tools, and technologies.',
   siteUrl: process.env.DEPLOY_URL || 'https://wrejcodes.com',
-  metaData: {
+  metadata: {
     author: '@wrejcodes',
   },
   plugins: [
@@ -23,13 +23,13 @@ module.exports = {
           tags: {
             typeName: 'Tag',
             create: true,
-            route: '/tag/:id'
-          }
+            route: '/tag/:id',
+          },
         },
         remark: {
           plugins: [
-            [ 'gridsome-plugin-remark-shiki', { theme: 'material-theme-palenight', skipInline: true } ],
-          ]
+            ['gridsome-plugin-remark-shiki', { theme: 'material-theme-palenight', skipInline: true }],
+          ],
         },
       },
     },
@@ -50,9 +50,9 @@ module.exports = {
       postcss: {
         plugins: [
           tailwindcss,
-          autoprefixer
-        ]
-      }
-    }
-  }
-}
+          autoprefixer,
+        ],
+      },
+    },
+  },
+};

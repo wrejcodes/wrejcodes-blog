@@ -1,13 +1,21 @@
 <template>
-    <Layout>
-        <h1 class="text-xl font-semibold mb-5">Pages</h1>
+  <Layout>
+    <h1 class="text-xl font-semibold mb-5">
+      Pages
+    </h1>
 
-        <ul class="list-outside list-disc">
-            <li v-for="post in $page.posts.edges" :key="post.path" class="mt-3">
-                <g-link :to="post.node.path">{{ post.node.title }} - {{ post.node.date }}</g-link>
-            </li>
-        </ul>
-    </Layout>
+    <ul class="list-outside list-disc">
+      <li
+        v-for="post in $page.posts.edges"
+        :key="post.path"
+        class="mt-3"
+      >
+        <g-link :to="post.node.path">
+          {{ post.node.title }} - {{ post.node.date }}
+        </g-link>
+      </li>
+    </ul>
+  </Layout>
 </template>
 
 <page-query>
@@ -26,8 +34,8 @@ query Posts {
 
 <script>
 export default {
-    metaInfo: {
-        title: 'Blog Posts'
-    }
-}
+  metaInfo: {
+    title: 'Blog Posts',
+  },
+};
 </script>

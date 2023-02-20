@@ -1,7 +1,7 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
-import '~/scss/main.scss'
-import DefaultLayout from '~/layouts/Default.vue'
+import '~/scss/main.scss';
+import DefaultLayout from '~/layouts/Default.vue';
 
 const fontsCss = `
 /* work-sans-200 - latin */
@@ -68,12 +68,12 @@ const fontsCss = `
        url('/fonts/work-sans-v18-latin-800italic.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 `;
-export default function (Vue, { router, head, isClient }) {
+export default function main(Vue, { /* router, */ head /* isClient */ }) {
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
+  Vue.component('Layout', DefaultLayout);
 
   head.style.push({
     type: 'text/css',
     cssText: fontsCss,
-  })
+  });
 }
