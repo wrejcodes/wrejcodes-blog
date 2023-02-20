@@ -37,6 +37,8 @@ query Post ($path: String!) {
         title
         date (format: "MMM D, Y")
         content
+        path
+        summary
         tags {
           title
           path
@@ -46,12 +48,10 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
+import SEO from '../mixins/SEO.vue';
+
 export default {
-  metaInfo() {
-    return {
-      title: this.$page.post.title,
-    };
-  },
+  mixins: [SEO],
 };
 </script>
 

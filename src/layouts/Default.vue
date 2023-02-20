@@ -30,9 +30,24 @@
 query {
   metadata {
     siteName
+    siteDescription
+    siteUrl
+    author
   }
 }
 </static-query>
+
+<script>
+export default {
+  metaInfo() {
+    return {
+      meta: [
+        { key: 'author', name: 'author', content: this.$static.metadata.author },
+      ],
+    };
+  },
+};
+</script>
 
 <style>
 </style>
