@@ -38,11 +38,11 @@
         class="self-center image-caption mb-15"
         v-html="$page.post.image.caption"
       />
-      <div
-        class="mt-8 mb-16 prose lg:prose-lg xl:prose-xl"
-        v-html="$page.post.content"
-      />
     </figure>
+    <div
+      class="mt-8 mb-16 prose lg:prose-lg xl:prose-xl"
+      v-html="$page.post.content"
+    />
   </Layout>
 </template>
 
