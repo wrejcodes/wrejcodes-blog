@@ -18,7 +18,7 @@ Here is a list:
 
 Here is a link [Link](https://example.com). This is fine-ish for now.
 
-```js
+```vue
     <template>
         <h1>Testing out the code block formatting</h1>
         <p>I hope this looks cool</p>

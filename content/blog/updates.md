@@ -10,7 +10,7 @@ There have been a few improvements made to the site. Tailwind purge is enabled a
 
 For the longest time I was not able to pull in path for my tags. I originally had this in my config.
 
-```js
+```javascript
 plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -36,7 +36,7 @@ plugins: [
 This didn't work as I got an error saying that graphQL couldn't find the field path on the tags collection. After trying to find out why I made this change and it started working.
 
 
-```js
+```javascript
 plugins: [
     {
       use: '@gridsome/source-filesystem',
