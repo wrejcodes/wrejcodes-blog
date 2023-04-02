@@ -4,8 +4,8 @@ date: "2023-02-19"
 title: "Let There Be Images!"
 tags: [ "dev", "new-feature" ]
 summary: "A couple new things added to the site such as images!"
-image: 
-    path: ../media/annie-spratt-8mqOw4DBBSg-unsplash.jpg
+image:
+    path: "/img/annie-spratt-8mqOw4DBBSg-unsplash.jpg"
     alt: "A picture of succulents in a pleasing arrangment"
     caption: '<span>Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/photos/8mqOw4DBBSg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>'
 ---
@@ -18,7 +18,7 @@ Today I have added a few new things to the site.
 
 SEO is always important if you want people to find your content. I really appreciated the approach that [@simon_mannes](https://mannes.tech/gridsome-tutorial/) took with adding SEO metadata as a mixin. Setting up a blog post with the following code and having it populate the SEO metadata is sweet!
 
-```javascript
+```js
 import SEO from '../mixins/SEO.vue';
 
 export default {
