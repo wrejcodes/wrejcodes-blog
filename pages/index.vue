@@ -11,11 +11,6 @@
 </template>
 
 <script>
-// export default {
-//   metaInfo: {
-//     title: 'wrejcodes',
-//   },
-// };
 </script>
 
 <style>
