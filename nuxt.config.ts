@@ -14,6 +14,9 @@ export default defineNuxtConfig({
             theme: 'github-dark',
         },
     },
+    image: {
+        provider: 'ipx',
+    }, 
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.scss'
     },
