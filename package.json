@@ -1,25 +1,16 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "astro-minimal-starter",
+  "version": "v1.4.0",
+  "private": false,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "start": "astro dev",
+    "build": "astro build",
+    "format": "npx prettier --write ."
   },
   "devDependencies": {
-    "@nuxt/content": "^2.5.2",
-    "@nuxt/eslint-config": "^0.1.1",
-    "@nuxt/image-edge": "^1.0.0-28004510.a0dc8e8",
-    "@nuxtjs/fontaine": "^0.2.4",
-    "@nuxtjs/tailwindcss": "^6.6.5",
-    "@tailwindcss/typography": "^0.5.9",
-    "eslint": "^8.37.0",
-    "nuxt": "^3.3.2",
-    "sass": "^1.60.0",
-    "sass-loader": "^13.2.2"
-  }
+    "@astrojs/sitemap": "^1.0.0",
+    "astro": "^1.1.5",
+    "prettier-plugin-astro": "^0.0.12"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
