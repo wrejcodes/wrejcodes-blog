@@ -8,10 +8,12 @@ const { post } = Astro.props;
 
 <article class="post-preview">
     <a href={post.url}>
-    {post.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={post.image} alt={post.alt} />}
-    <h1 class="title">{post.title}</h1>
-    <time class="publish-date">{post.publishDate}</time>
-    <p>{post.description}</p>
+    <div class="post-container">
+      {post.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={post.image} alt={post.alt} />}
+      <h1 class="title">{post.title}</h1>
+      <time class="publish-date">{post.publishDate}</time>
+      <p>{post.description}</p>
+    </div>
     </a>
 </article>
 
@@ -29,6 +31,16 @@ const { post } = Astro.props;
   max-width: 600px;
   height: auto;
   margin-bottom: 1rem;
+}
+
+.post-container {
+  padding: 1.25em;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.post-preview {
+  margin-top: 2em;
 }
 
 .title,
