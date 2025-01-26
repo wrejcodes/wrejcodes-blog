@@ -1,3 +1,2 @@
-Sitemap: https://wrejcodes.com
-
-User-agent:*
+User-agent: *
+Allow: /
