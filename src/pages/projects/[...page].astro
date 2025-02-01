@@ -7,7 +7,7 @@ import Paginator from '../../components/Paginator.astro'
   
 export async function getStaticPaths({paginate}) {
 
-  const posts = await Astro.glob('./*.md').then(posts =>
+  const posts = await Astro.glob('./*.astro').then(posts =>
 	posts
 		.map(({ frontmatter, url }) => ({
       url: url,
@@ -30,8 +30,8 @@ return paginate(posts, {pageSize: 10});
 // All variables are available to use in the HTML template below.
 
 const seo = {
-  title: 'Example Blog',
-  description: 'This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support.'
+  title: 'Projects',
+  description: 'Here\'s where I\'ll list things I\'m working on'
 }
 
 const { page } = Astro.props;
@@ -40,7 +40,7 @@ const { page } = Astro.props;
 
 <Layout seo={seo} >
   <Container>
-    <article class="blog-page-content__article">
+    <article class="project-page-content__article">
       <section class="postlist">
         {page.data.map((post) => <BlogPostPreview post={post} />)}
       </section>
