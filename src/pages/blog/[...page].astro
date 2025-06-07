@@ -1,15 +1,18 @@
 ---
-import Layout from '../../layouts/Base.astro'
+import Layout from '../../layouts/Page.astro'
 import Container from '../../components/Container.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import Paginator from '../../components/Paginator.astro'
+import { frontmatter } from '../projects/test.astro';
   
   
 export async function getStaticPaths({paginate}) {
 
   const posts = await Astro.glob('./*.md').then(posts =>
 	posts
-		.map(({ frontmatter, url }) => ({
+    // filter out posts that aren't ready yet
+		.filter(({frontmatter}) => frontmatter.status !== 'draft')
+    .map(({ frontmatter, url }) => ({
       url: url,
 			title: frontmatter.title,
 			description: frontmatter.description,

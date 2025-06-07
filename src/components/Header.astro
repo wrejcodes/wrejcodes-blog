@@ -1,13 +1,14 @@
 ---
 import Container from './Container.astro';
+import '../styles/global.css';
 ---
 
-<header class="header-container">
+<header class="bg-dark-grey header-container text-platinum-700">
     <Container>
         <div class="navigation">
-            <div class="logo"><a href="/">Wrejcodes</a></div>
+            <div class="logo"><a href="/">WREJCODES</a></div>
             <nav class="nav-links">
-                <a href="/blog" class="nav-item">Blog</a>
+                <a href="/blog" class="text-platinum">Blog</a>
             </nav>
         </div>
     </Container>
@@ -24,7 +25,6 @@ import Container from './Container.astro';
   
 }
 .header-container {
-   background-color: var(--english-violet);
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -45,7 +45,6 @@ import Container from './Container.astro';
 
 .nav-item {
   text-decoration: none;
-  color: var(--silver);
   font-size: 1rem;
   transition: color 0.3s ease;
 }

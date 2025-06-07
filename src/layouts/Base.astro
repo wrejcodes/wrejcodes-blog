@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
+import "../styles/global.css";
 
 
 export interface Props {
@@ -15,9 +16,9 @@ const { seo } = Astro.props;
     <BaseHead {...seo} />
     <slot name="head-bottom" />
   </head>
-  <body>
+  <body class="bg-grey-500 text-platinum-700 text-lg leading-8">
     <slot name="header" />
-    <main>
+    <main class="pt-20">
       <slot />
     </main>
     <slot name="footer" />

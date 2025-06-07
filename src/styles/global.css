@@ -1,3 +1,71 @@
+@import "tailwindcss";
+
+
+@theme {
+  /* davy’s grey ----------------------------------------------------------- */
+  --color-dark-grey:        #555358; /* DEFAULT */
+  --color-dark-grey-100:    #111112;
+  --color-dark-grey-200:    #222224;
+  --color-dark-grey-300:    #343236;
+  --color-dark-grey-400:    #454347;
+  --color-dark-grey-500:    #555358;
+  --color-dark-grey-600:    #78757c;
+  --color-dark-grey-700:    #99979d;
+  --color-dark-grey-800:    #bbbabe;
+  --color-dark-grey-900:    #dddcde;
+
+  /* dim grey – set #1 ----------------------------------------------------- */
+  --color-grey:          #5f6062; /* DEFAULT */
+  --color-grey-100:      #131314;
+  --color-grey-200:      #262728;
+  --color-grey-300:      #393a3b;
+  --color-grey-400:      #4c4d4f;
+  --color-grey-500:      #5f6062;
+  --color-grey-600:      #7e8083;
+  --color-grey-700:      #9ea0a2;
+  --color-grey-800:      #bebfc1;
+  --color-grey-900:      #dfdfe0;
+
+  /* dim grey – set #2 (alt) ---------------------------------------------- */
+  --color-light-grey:      #7b7263; /* DEFAULT */
+  --color-light-grey-100:  #191714;
+  --color-light-grey-200:  #322e28;
+  --color-light-grey-300:  #4b453c;
+  --color-light-grey-400:  #645c50;
+  --color-light-grey-500:  #7b7263;
+  --color-light-grey-600:  #999080;
+  --color-light-grey-700:  #b3aca0;
+  --color-light-grey-800:  #ccc8c0;
+  --color-light-grey-900:  #e6e3df;
+
+  /* platinum -------------------------------------------------------------- */
+  --color-platinum:          #e6e8e6; /* DEFAULT */
+  --color-platinum-100:      #2d302d;
+  --color-platinum-200:      #596159;
+  --color-platinum-300:      #879087;
+  --color-platinum-400:      #b7bcb7;
+  --color-platinum-500:      #e6e8e6;
+  --color-platinum-600:      #ecedec;
+  --color-platinum-700:      #f1f2f1;
+  --color-platinum-800:      #f5f6f5;
+  --color-platinum-900:      #fafbfa;
+
+  /* mustard --------------------------------------------------------------- */
+  --color-mustard:           #fcdc4d; /* DEFAULT */
+  --color-mustard-100:       #413601;
+  --color-mustard-200:       #836b02;
+  --color-mustard-300:       #c4a103;
+  --color-mustard-400:       #fbd00e;
+  --color-mustard-500:       #fcdc4d;
+  --color-mustard-600:       #fde372;
+  --color-mustard-700:       #fdea96;
+  --color-mustard-800:       #fef1b9;
+  --color-mustard-900:       #fef8dc;
+
+  /* you can add more shared tokens (fonts, breakpoints, easings, etc.) here */
+}
+
+
 :root {
   --container-width: 960px;
   --container-padding: 1rem;
