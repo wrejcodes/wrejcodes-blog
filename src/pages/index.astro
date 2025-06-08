@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Page.astro";
 import Container from "../components/Container.astro";
+import UnderlinedTitle from "../components/UnderlinedTitle.astro";
 
 const seo = {
   title: "Wrejcodes HQ",
@@ -12,39 +13,11 @@ const seo = {
   seo={seo}
 >
   <Container>
-    <h1 class="text-4xl pt-6 pb-3 font-bold layered-underline drop-shadow-sm md:drop-shadow">WREJCODES</h1>
-    <p class="py-8">Welcome to my site. I plan on putting stuff that I make here. I'll write about it and other random things from time to time.</p>
+    <UnderlinedTitle>WREJCODES</UnderlinedTitle>
 
-    <a href="/blog">Blog →</a>
+    <div class="flex gap-6 py-6">
+      <a href="/blog">Rantings →</a>
+      <a href="/projects">Projects →</a>
+    </div>
   </Container>
 </Layout>
-
-<style>
-  /* Put this in a global stylesheet or inside a Tailwind @layer block */
-.layered-underline {
-  position: relative;          /* anchor for the pseudo-elements */
-  display: inline-block;       /* let the underline match the exact text width */
-}
-
-.layered-underline::after {    /* bottom (thicker) bar */
-  content: "";
-  position: absolute;
-  left: 2px;
-  bottom: 0;                 /* flush with text baseline */
-  width: 100%;
-  height: 4px;                 /* thickness of the gray bar */
-  background: var(--color-dark-grey);
-}
-
-.layered-underline::before {   /* top (accent) bar */
-  content: "";
-  position: absolute;
-  left: 2px;
-  bottom: 2px;                 /* 2 px above the gray bar for a layered look */
-  width: 100%;
-  z-index:1;
-  height: 3px;                 /* thinner mustard accent */
-  background: var(--color-mustard);
-}
-
-</style>
