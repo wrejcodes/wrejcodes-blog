@@ -17,7 +17,18 @@ const { frontmatter } = Astro.props;
       {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
       <UnderlinedTitle>{frontmatter.title}</UnderlinedTitle>
       <p class="py-6"><time>{frontmatter.publishDate}</time></p>
-      <slot />
+      <div class="post-content">
+        <slot />
+      </div>
     </article>
   </Container>
 </Layout>
+
+<style>
+  @import 'tailwindcss';
+  .post-content {
+    h2 {
+      @apply text-3xl py-2 font-extrabold;
+    }
+  }
+</style>
