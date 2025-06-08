@@ -1,0 +1,56 @@
+---
+import Container from './Container.astro';
+import '../styles/global.css';
+---
+
+<header class="bg-dark-grey header-container text-platinum-700">
+    <Container>
+        <div class="navigation">
+            <div class="logo"><a href="/">WREJCODES</a></div>
+            <nav class="nav-links">
+                <a href="/blog" class="text-platinum">Blog</a>
+                <a href="/projects" class="text-platinum">Projects</a>
+            </nav>
+        </div>
+    </Container>
+</header>
+
+
+<style>
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 0rem;
+  
+}
+.header-container {
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--beige);
+  font-weight: bold;
+  a {
+    color: var(--beige);
+    text-decoration: none;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--slate-gray);
+}
+</style>

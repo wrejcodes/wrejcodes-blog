@@ -1,6 +1,7 @@
 ---
-import Layout from "../layouts/Base.astro";
+import Layout from "../layouts/Page.astro";
 import Container from "../components/Container.astro";
+import UnderlinedTitle from "../components/UnderlinedTitle.astro";
 
 const seo = {
   title: "Wrejcodes HQ",
@@ -12,9 +13,11 @@ const seo = {
   seo={seo}
 >
   <Container>
-    <h1>Wrejcodes</h1>
-    <p>Welcome to my site. I plan on putting stuff that I make here. I'll write about it and other random things from time to time.</p>
+    <UnderlinedTitle>WREJCODES</UnderlinedTitle>
 
-    <a href="/blog">Blog →</a>
+    <div class="flex gap-6 py-6">
+      <a href="/blog">Rantings →</a>
+      <a href="/projects">Projects →</a>
+    </div>
   </Container>
 </Layout>

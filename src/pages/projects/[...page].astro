@@ -3,16 +3,13 @@ import Layout from '../../layouts/Page.astro'
 import Container from '../../components/Container.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import Paginator from '../../components/Paginator.astro'
-import { frontmatter } from '../projects/test.astro';
   
   
 export async function getStaticPaths({paginate}) {
 
-  const posts = await Astro.glob('./*.md').then(posts =>
+  const posts = await Astro.glob('./*.astro').then(posts =>
 	posts
-    // filter out posts that aren't ready yet
-		.filter(({frontmatter}) => frontmatter.status !== 'draft')
-    .map(({ frontmatter, url }) => ({
+		.map(({ frontmatter, url }) => ({
       url: url,
 			title: frontmatter.title,
 			description: frontmatter.description,
@@ -33,8 +30,8 @@ return paginate(posts, {pageSize: 10});
 // All variables are available to use in the HTML template below.
 
 const seo = {
-  title: 'Example Blog',
-  description: 'This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support.'
+  title: 'Projects',
+  description: 'Here\'s where I\'ll list things I\'m working on'
 }
 
 const { page } = Astro.props;
@@ -43,7 +40,7 @@ const { page } = Astro.props;
 
 <Layout seo={seo} >
   <Container>
-    <article class="blog-page-content__article">
+    <article class="project-page-content__article">
       <section class="postlist">
         {page.data.map((post) => <BlogPostPreview post={post} />)}
       </section>

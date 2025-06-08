@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Page.astro";
+import Container from "../../components/Container.astro";
+import UnderlinedTitle from "../../components/UnderlinedTitle.astro";
+
+const seo = {
+  title: "Test Project | Wrejcodes HQ",
+  description: "A test project to see if this will work"
+}
+
+
+export const frontmatter = {
+    title:  'Balatro Seed Extractor',
+    description: 'A project I\'m working on that allows me to easily get the seed from screenshots of previous balatro runs.',
+    publishDate: 'June 7, 2025',
+}
+---
+
+<Layout seo={seo} >
+  <Container>
+    <UnderlinedTitle>Seed Extractor</UnderlinedTitle>
+    <p class="py-4">I'm working on a tool I can use on my phone to extract seeds from Balatro screenshots. I still have some room to improve but I have a semi-functional seed OCR shortut on my phone.</p>
+    <p class="py-4">Here's how it works:</p>
+    <ul class="list-disc ml-12">
+      <li>It opens my photos and allows me to pick a screenshot.</li>
+      <li>It feeds the selected photo into a pythonista script.</li>
+      <li>The script crops the image and uses OCR built into the phone to pull text from the image.</li>
+      <li>It finds the seed.</li>
+      <li>Eventually, I'd like to have it auto copy the seed value without showing pythonista. However, currently it has to use the console to copy the seed.</li>
+    </ul>
+  </Container>
+</Layout>

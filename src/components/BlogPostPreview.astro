@@ -6,12 +6,12 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="post-preview">
+<article class="post-preview bg-light-grey-300 hover:bg-light-grey-400 drop-shadow">
     <a href={post.url}>
     <div class="post-container">
       {post.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={post.image} alt={post.alt} />}
-      <h1 class="title">{post.title}</h1>
-      <time class="publish-date">{post.publishDate}</time>
+      <h1 class="title text-mustard-500 py-4">{post.title}</h1>
+      <time class="publish-date py-2">{post.publishDate}</time>
       <p>{post.description}</p>
     </div>
     </a>
@@ -58,7 +58,6 @@ const { post } = Astro.props;
 .title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--theme-text);
 }
 
 </style>

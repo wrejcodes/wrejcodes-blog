@@ -1,0 +1,33 @@
+<h1 class="text-4xl pt-6 pb-3 font-bold layered-underline drop-shadow-sm md:drop-shadow"><slot /></h1>
+
+
+<style>
+    /* Put this in a global stylesheet or inside a Tailwind @layer block */
+  .layered-underline {
+    position: relative;          /* anchor for the pseudo-elements */
+    display: inline-block;       /* let the underline match the exact text width */
+  }
+  
+  .layered-underline::after {    /* bottom (thicker) bar */
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: 0;                 /* flush with text baseline */
+    width: 100%;
+    height: 4px;                 /* thickness of the gray bar */
+    background: var(--color-dark-grey);
+  }
+  
+  .layered-underline::before {   /* top (accent) bar */
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: 2px;                 /* 2 px above the gray bar for a layered look */
+    width: 100%;
+    z-index:1;
+    height: 3px;                 /* thinner mustard accent */
+    background: var(--color-mustard);
+  }
+  
+  </style>
+  
